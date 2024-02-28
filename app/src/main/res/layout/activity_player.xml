@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".PlayerActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/player_Image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/music_player_bkd"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:id="@+id/music_player_toolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/player_hearden"
+        android:gravity="top"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/back_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ripple_effect"
+                app:shapeAppearance="@style/corner50"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                app:tint="@color/PayneGrey" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/song_title_Player"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:fontFamily="@font/alice"
+            tools:ignore="HardcodedText" />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="end">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="45dp"
+                android:id="@+id/menu_button_Player"
+                android:layout_height="45dp"
+                android:background="@drawable/ripple_effect"
+                app:shapeAppearance="@style/corner50"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/dots_1"
+                app:tint="@color/PayneGrey" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/song_folderName_Player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/folder_name"
+        android:gravity="center"
+        android:layout_below="@+id/music_player_toolbar"
+        android:textColor="@color/PayneGrey"
+        android:fontFamily="@font/galada"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_below="@id/song_folderName_Player">
+
+        <LinearLayout
+            android:id="@+id/small_img_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_music_img_bkd"
+            android:clickable="true"
+            android:padding="7dp"
+            android:focusable="true">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/player_Image_small"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:shapeAppearance="@style/corner50"
+                android:scaleType="centerCrop"
+                android:src="@drawable/live_music"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="140dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_botton_bak"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/tvSeekbarStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/PayneGrey"
+                    android:fontFamily="@font/alice"
+                    android:text="@string/_00_00"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/prevBtnMusic"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ripple_effect"
+                    app:shapeAppearance="@style/corner50" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/previous_back"
+                    app:tint="@color/PayneGrey" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/playPauseBtnMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/pause_ic_icon32"
+                    app:iconSize="25dp"
+                    app:iconTint="@color/PayneGrey"
+                    app:rippleColor="@color/riple_color"
+                    android:backgroundTint="@color/dark_mode2"
+                    app:shapeAppearance="@style/corner50"
+                    app:strokeColor="@color/PayneGrey"
+                    android:clickable="true"
+                    android:onClick="onPlayPauseClick"
+                    app:strokeWidth="1.5dp"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/nextBtnMusic"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ripple_effect"
+                    app:shapeAppearance="@style/corner50" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/next_skip_icon_small1"
+                    app:tint="@color/PayneGrey" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tvSeekbarEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/alice"
+                    android:textColor="@color/PayneGrey"
+                    android:text="@string/_00_00"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="70dp">
+
+            <RelativeLayout
+                android:layout_width="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:shapeAppearance="@style/corner50"
+                    android:clickable="true"
+                   android:focusable="true"
+                    android:background="@drawable/ripple_effect"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/repeat_fill_icon_24"
+                    app:tint="@color/PayneGrey" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbarPa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="70dp"
+                android:progressTint="@color/PayneGrey" />
+
+
+            <RelativeLayout
+                android:layout_width="45dp"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="45dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shuffleBtn_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:shapeAppearance="@style/corner50"
+                    android:background="@drawable/ripple_effect"
+                    />
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icons8_shuffle_24"
+                    app:tint="@color/PayneGrey" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20sp"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/ripple_effect"
+                    app:shapeAppearance="@style/corner50" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icons8_heart_no"
+                    app:tint="@color/PayneGrey" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="20dp"
+                    tools:ignore="UselessLeaf">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/drop_up_Listview"
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/ripple_effect"
+                        app:shapeAppearance="@style/corner50" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icons8_list"
+                        app:tint="@color/PayneGrey" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

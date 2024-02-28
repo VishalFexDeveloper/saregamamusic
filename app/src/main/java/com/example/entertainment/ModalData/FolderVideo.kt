@@ -1,0 +1,1 @@
+package com.example.entertainment.ModalDataimport android.net.Uridata class FolderVideo(val id:String, val name:String, val videoCount:String,val img: Uri)

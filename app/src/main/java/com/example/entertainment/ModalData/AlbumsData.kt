@@ -1,0 +1,1 @@
+package com.example.entertainment.ModalDatadata class AlbumsData(val id: String,                      val name: String,                      val albumId :String,                      val albumIcon: String, // Assuming albumIcon is a String, adjust the type accordingly                      val albumsCount: String)

@@ -1,0 +1,1 @@
+package com.example.entertainment.ModalDatadata class BottomSheetModal(val img:Int,val name:String)

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    tools:context=".AlbumsActivitySec">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blue"
+        android:layout_height="270dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="22dp"
+            app:menu="@menu/selected"
+            >
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/albumsBackBtnSec"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:shapeAppearance="@style/corner50" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24sp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/arrow_back_ios_new_24_icon"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="130dp"
+                android:id="@+id/albumsImgSec"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearance="@style/albumscornerSize"
+                android:background="@drawable/img3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/albumsNameSongSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/DarkGray"
+                    android:gravity="start"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/albumCountSongSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/PayneGrey"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="start"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="-40dp"
+        app:cardCornerRadius="25sp"
+        app:cardElevation="@dimen/fab_margin"
+        android:backgroundTint="@color/blue"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_cornal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    app:cardMaxElevation="@dimen/fab_margin"
+                    android:backgroundTint="@color/PayneGrey">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/play_icon32"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/DarkGray"
+                        android:text="PLAY"
+                        android:textColor="@color/DarkGray"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        app:iconGravity="textStart"
+                        android:focusable="true"
+                        app:shapeAppearance="@style/albumscornerSize"
+                        />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_weight="1"
+                    app:cardMaxElevation="0dp"
+                    android:backgroundTint="@color/PayneGrey">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        app:iconSize="22dp"
+                        android:textColor="@color/DarkGray"
+                        app:iconTint="@color/DarkGray"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/icons8_shuffle_24"
+                        android:text="SHUFFLE"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:focusable="true"
+                        app:iconGravity="textStart"
+                        app:shapeAppearance="@style/albumscornerSize"
+                        />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/albums_RecyclerView_Sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

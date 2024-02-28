@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Entertainment" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:navigationBarColor">@color/blue</item>
+    </style>
+
+    <style name="Theme.Entertainment" parent="Base.Theme.Entertainment" />
+
+    <style name="splashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="android:navigationBarColor">@color/blue</item>
+    </style>
+
+    <style name="musicPlayer" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_mode2</item>
+        <item name="android:statusBarColor">@color/dark_mode2</item>
+        <item name="colorPrimaryVariant">@color/dark_mode2</item>
+        <item name="android:navigationBarColor">@color/dark_mode2</item>
+    </style>
+
+</resources>

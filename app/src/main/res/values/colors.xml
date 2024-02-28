@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+
+    <color name="red">#8E0000</color>
+    <color name="ripelwhite">#80414141</color>
+    <color name="dark_mode1">#13131E</color>
+    <color name="dark_mode2">#0A0A0A</color>
+    <color name="dark_mode3">#15292B</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkwhite80">#80FFFFFF</color>
+    <color name="tablaouticoncolor">#E1EAEAEA</color>
+    <color name="DarkGray">#a9a9a9 </color>
+    <color name="PayneGrey">#536878</color>
+    <color name="blue">#191a2e</color>
+    <color name="green">#00897B</color>
+<color name="riple_color">#80536878</color>
+
+
+</resources>

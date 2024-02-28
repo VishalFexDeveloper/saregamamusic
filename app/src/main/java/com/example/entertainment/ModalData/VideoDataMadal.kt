@@ -1,0 +1,1 @@
+package com.example.entertainment.ModalDataimport android.net.Uridata class VideoDataMadal (val id:String,val title: String,val duration: Long = 0, val folder:String, val size:String,val path:String, val artUri: Uri)

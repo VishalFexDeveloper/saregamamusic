@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    android:gravity="center"
+    tools:context=".SplaleshSreen.SpaleshScreenActivity">
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:shimmer_duration="1000"
+       app:shimmer_base_color="@color/PayneGrey"
+       >
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="15dp"
+           android:gravity="center">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:backgroundTint="@color/blue"
+               android:layout_centerInParent="true"
+               app:cardCornerRadius="250dp"
+               app:cardElevation="@dimen/fab_margin">
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:rotation="-7"
+                   android:layout_margin="20dp"
+                   android:layout_height="wrap_content">
+                   <com.google.android.material.imageview.ShapeableImageView
+                       android:id="@+id/appIcon"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:src="@drawable/app_icon"
+                       app:shapeAppearance="@style/curved"
+                       android:tint="#F713131E"
+                       tools:ignore="ContentDescription" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="NOW"
+                       android:textColor="@color/PayneGrey"
+                       android:textStyle="bold|italic"
+                       android:textSize="30sp"
+                       android:fontFamily="@font/alice"
+                       android:layout_centerInParent="true"/>
+               </RelativeLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <TextView
+               android:id="@+id/appName"
+               android:layout_below="@id/card"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:textColor="@color/PayneGrey"
+               android:gravity="center"
+               android:textStyle="bold|italic"
+               android:layout_marginTop="70dp"
+               android:fontFamily="@font/nosifer"
+               android:text="Saregama"/>
+           <TextView
+               android:layout_below="@id/appName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:fontFamily="@font/alice"
+               android:textColor="@color/DarkGray"
+               android:gravity="center"
+               android:text="@string/musics_videos"/>
+
+       </RelativeLayout>
+
+
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/galada"
+            android:gravity="center"
+            android:text="@string/edugaon"
+            android:layout_marginBottom="-50dp"
+            android:textColor="#F4511E"
+            android:textSize="28sp" />
+
+
+
+
+</RelativeLayout>
